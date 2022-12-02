@@ -1,4 +1,3 @@
-
 document.querySelector('#sort-to-max').onclick = sortToMax;
 document.querySelector('#sort-to-min').onclick = sortToMin;
 document.querySelector('#reset').onclick = reset;
@@ -13,20 +12,21 @@ function sortToMax(){
 
         }
     }
-}
-function sortToMin() {
+} 
+
+function sortToMin() { 
     let items = document.querySelector('.item-container');
     for (let i = 0; i<items.children.length; i++){
         for (let j = i; j<items.children.length; j++){
             if (+items.children[i].getAttribute('data-sort') < +items.children[j].getAttribute('data-sort')){
                 replaceNode = items.replaceChild(items.children[j], items.children[i]);
                 pushElem(replaceNode, items.children[i]);
-            }
+            }   
         }
     }
-
-}
-
+   
+} 
+  
 function reset()  {
     let items = document.querySelector('.item-container');
     for (let i = 0; i<items.children.length; i++){
@@ -59,7 +59,7 @@ function sortFunc() {
         }
         else if (it.children[i].dataset.gender!=chooseGenderElem) {
             it.children[i].style.display='none';
-        }
+        } 
         else {
             it.children[i].style.display='inline-block';
         }
@@ -73,7 +73,7 @@ function sortFunc() {
         }
         else if (it.children[i].dataset.gender!=chooseGenderElem) {
             it.children[i].style.display='none';
-        }
+        } 
         else {
             it.children[i].style.display='inline-block';
         }

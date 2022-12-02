@@ -4,8 +4,8 @@ class Products {
     }
 
     handleSetLocationStorage(element, id) {
-        const { pushProduct, products } = localStorageUtil.putProducts(id);
-
+        const { pushProduct, products } = localStorageUtil.putProducts(id); 
+      
         if (pushProduct) {
             element.classList.add(this.classNameActive);
 
@@ -24,7 +24,7 @@ class Products {
             let actualPrice = +price;
             if (!(productsStore.indexOf(String(id)) === -1)) {
                 activeClass = ' '+this.classNameActive+' ';
-            }
+            } 
             if (actualSale !== 0 ) {
                 actualPrice = Math.floor(+actualPrice - ((+actualPrice * +actualSale)/100)) ;
                 htmlCatalog += `
@@ -32,16 +32,16 @@ class Products {
                `
                 if (aviable=='true') {
                     htmlCatalog += `<button class = 'shop-inner-text ${activeClass}' onclick="productsPage.handleSetLocationStorage(this, '${id}');"></button>`
-                }
+                } 
                 htmlCatalog += `<div class = 'shop-item__img' style = "background-image: url('${img}');" ></div>
                 <span class = 'shop-item__name'>${name}</span>
                 <span class = 'shop-item__price shop-item__sale' ><span class = 'shop-item__old-price'>€ ${price}</span><span class = 'shop-item__new-price'>€ ${actualPrice}</span></span>`;
             } else {
-                htmlCatalog +=
+                htmlCatalog += 
                 ` <div class = 'shop-item' data-sort = '${price}' data-gender = '${gender}' data-sale = '${actualSale}' id = '${id}'>`
                 if (aviable=='true') {
                     htmlCatalog += `<button class = 'shop-inner-text ${activeClass}' onclick="productsPage.handleSetLocationStorage(this, '${id}');"></button>`
-                }
+                } 
                 htmlCatalog +=`<div class = 'shop-item__img' style = "background-image: url('${img}');"></div>
                 <span class = 'shop-item__name'>${name}</span>
                 <span class = 'shop-item__price' >€ ${price}</span>`;
@@ -49,7 +49,7 @@ class Products {
              htmlCatalog += `
             </div>
             `;
-
+ 
         });
 
         const html = htmlCatalog;
@@ -59,4 +59,3 @@ class Products {
 
 const productsPage = new Products();
 productsPage.render();
-

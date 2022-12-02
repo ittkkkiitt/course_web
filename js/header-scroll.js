@@ -8,7 +8,7 @@ window.addEventListener('scroll', () => {
     if (scroll_dist > 30) {
         header.style.borderBottom = '1.5px solid white';
     }
-    if (scroll_dist <= 30) {
+    if (scroll_dist <= 30) { 
         header.style.borderBottom = 'none';
     }
     if (scroll_dist >= main_image_h-header_h && !contain_scroll()) {
@@ -18,6 +18,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
+//  border-bottom: 1px solid white ;
 
 
 

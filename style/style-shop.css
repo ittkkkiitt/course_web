@@ -198,13 +198,15 @@ body {
           justify-content: space-evenly;
 }
 .option-bar__item {
-  border-bottom: 1px solid black;
+  border-bottom:2px solid black;
   position: relative;
   font-size: 16px;
-  margin: 20px 0;
+  width: 80px;
+  padding: 20px 0 10px 0;
   max-width: 100px;
 }
 .option-bar__btn {
+  font-weight: 500;
   font-size: 20px;
 }
 .option-bar__item:hover {
@@ -436,7 +438,7 @@ input[type='radio']{
 .option-bar__inner-menu{
   overflow-x: hidden;
   position: absolute;
-  left: -30px;
+  left: -20px;
   display: none;
   background-color: white;
   position: absolute;
@@ -508,7 +510,7 @@ label:hover, label:focus {
 }
 .option-bar__sale-menu {
   overflow-x: hidden;
-  left: -60px;
+  left: -40px;
   display: none;
   background-color: white;
   position: absolute;
@@ -517,7 +519,7 @@ label:hover, label:focus {
           justify-content: center;
   width: 130px;
   z-index: 3;
-  height: 60px;
+  height: 64px;
 }
 .item-sale:hover .option-bar__sale-menu,
 .item-sale:focus .option-bar__sale-menu{

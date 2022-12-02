@@ -1,3 +1,4 @@
+
 class Shop {
     closeCart(){
         let cartContainer = document.querySelector('.cart-container');
@@ -8,6 +9,7 @@ class Shop {
         const productsStore = localStorageUtil.getProducts();
         let htmlCatalog = `<button class = 'close-cart-btn' onclick = shoppingCart.closeCart();>╳</button>`;
         let sumCatalog = 0;
+
         Items.forEach(({ id, name, price, sale, img }) => {
             let actualPrice = +price - Math.floor((+price * +sale)/100);
             if (productsStore.indexOf(String(id)) !== -1) {
@@ -18,7 +20,7 @@ class Shop {
                         <span class = 'cart-container__item-name'>${name}</span>
                         <span class = 'cart-container__item-price'>€ ${actualPrice} </span>
                     </div>
-                </div>
+                </div> 
                 `;
                 sumCatalog+=+price;
             }
@@ -31,5 +33,5 @@ class Shop {
         ROOT_SHOP.innerHTML = html;
     }
 }
-
+        
 const shoppingCart = new Shop();

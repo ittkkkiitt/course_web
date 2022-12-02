@@ -29,7 +29,7 @@ a {
 .aside {
    background-color: rgba(255, 255, 255, 0.725);
 }
-.main-image--fragrance {
+.main-image--gallery {
    position: absolute;
    height: 100vh;
    background-position: center;
@@ -58,13 +58,13 @@ a {
    border-radius: 10px;
    background-color: white;
 }
-.inner-page--1 .main-image--fragrance {
+.inner-page--1 .main-image--gallery {
    -webkit-filter: brightness(0.5) ;
            filter: brightness(0.5) ;
 
    background-image: url('../style/Img/cover/gucci_bloom.jpg');
 }
-.inner-page--2 .main-image--fragrance  {
+.inner-page--2 .main-image--gallery  {
    position: absolute;
    background-position-x: 25%;
    -webkit-filter: brightness(0.5) sepia(0.2);
@@ -72,7 +72,7 @@ a {
 ;
    background-image: url('../style/Img/cover/guilty.jpg');
 }
-.inner-page--3 .main-image--fragrance {
+.inner-page--3 .main-image--gallery {
    position: absolute;
    -webkit-filter: brightness(0.5);
            filter: brightness(0.5);
