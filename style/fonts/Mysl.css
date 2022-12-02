@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Mysl';
+    src: url('Mysl W10 Italic.eot');
+    src: local('Mysl Italic'), local('Mysl-Italic'),
+        url('Mysl W10 Italic.eot?#iefix') format('embedded-opentype'),
+        url('Mysl W10 Italic.woff2') format('woff2'),
+        url('Mysl W10 Italic.woff') format('woff'),
+        url('Mysl W10 Italic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}

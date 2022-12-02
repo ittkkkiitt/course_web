@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'Granjon';
+    src: url('GranjonLTStd-Italic.eot');
+    src: local('Granjon Italic'), local('GranjonLTStd-Italic'),
+        url('GranjonLTStd-Italic.eot?#iefix') format('embedded-opentype'),
+        url('GranjonLTStd-Italic.woff2') format('woff2'),
+        url('GranjonLTStd-Italic.woff') format('woff'),
+        url('GranjonLTStd-Italic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Granjon';
+    src: url('GranjonLTStd-Bold.eot');
+    src: local('Granjon Bold'), local('GranjonLTStd-Bold'),
+        url('GranjonLTStd-Bold.eot?#iefix') format('embedded-opentype'),
+        url('GranjonLTStd-Bold.woff2') format('woff2'),
+        url('GranjonLTStd-Bold.woff') format('woff'),
+        url('GranjonLTStd-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Granjon';
+    src: url('GranjonLTStd.eot');
+    src: local('Granjon Roman'), local('GranjonLTStd'),
+        url('GranjonLTStd.eot?#iefix') format('embedded-opentype'),
+        url('GranjonLTStd.woff2') format('woff2'),
+        url('GranjonLTStd.woff') format('woff'),
+        url('GranjonLTStd.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gucci Shop</title>
+    <link rel="stylesheet" type="text/css" href="../style/style-shop.css">
+    <link rel="stylesheet" type="text/css" href="../style/new_good.css">
+    <link rel="stylesheet" type="text/css" href="../style/products.css">
+    <link rel="stylesheet" type="text/css" href="../style/shop-cart.css">
+</head>
+<body>
+    <header class = 'header'>
+        <button class="header__btn--close" onclick ="Close();">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M3.5,7 C3.22385763,7 3,6.77614237 3,6.5 C3,6.22385763 3.22385763,6 3.5,6 L20.5,6 C20.7761424,6 21,6.22385763 21,6.5 C21,6.77614237 20.7761424,7 20.5,7 L3.5,7 Z M3.5,12 C3.22385763,12 3,11.7761424 3,11.5 C3,11.2238576 3.22385763,11 3.5,11 L20.5,11 C20.7761424,11 21,11.2238576 21,11.5 C21,11.7761424 20.7761424,12 20.5,12 L3.5,12 Z M3.5,17 C3.22385763,17 3,16.7761424 3,16.5 C3,16.2238576 3.22385763,16 3.5,16 L20.5,16 C20.7761424,16 21,16.2238576 21,16.5 C21,16.7761424 20.7761424,17 20.5,17 L3.5,17 Z"/>
+          </svg>
+        </button>
+        <aside class="aside">
+            <ul class="aside__nav">
+                <li class="aside__item"><a class = "aside__link" href="#">store</a></li>
+                <li class="aside__item"><a class = "aside__link" href="new_good.html">new products</a></li>
+                <li class="aside__item"><a class = "aside__link" href="../index.html">gallery</a></li>
+                <li class="aside__item"><a class = "aside__link" href="discounts.html">discounts</a></li>
+            </ul>
+        </aside>
+        <div class="header__icon-container" id ='header-content' >
+        </div>
+        <nav class="header__nav">
+            <a class="header__link" href="#">store</a>
+            <a  class="header__link" href="new_good.html">new products</a>
+            <h1 class="header__logo">Gucci<span class="logo-caption">parfume</span></h1>
+            <a  class="header__link" href="../index.html">gallery</a>
+            <a  class="header__link" href="discounts.html">discounts</a>
+        </nav>
+    </header>
+    <div class="main-image"></div>
+    <div class="option-bar">
+        <ul class="option-bar__list">
+            <li class="option-bar__item item-price">
+                <button id = "sort" class="option-bar__btn" >
+                    <div class="option-bar--sort">sort</div>
+                </button>
+                <div class="option-bar__inner-menu inner-menu">
+                    <form class="option-bar__form--price">
+                        <input type="radio" id = "sort-to-max" name="price" value="ascending">
+                        <label class="option-bar__inner-item" for="sort-to-max">ascending price</label>
+
+                        <input type="radio" id = "sort-to-min" name="price" value="descending">
+                        <label class="option-bar__inner-item" for="sort-to-min">descending price</label>
+
+                        <input type="radio" id = "reset" name="price" value="none" checked>
+                        <label class="option-bar__inner-item" for="reset">reset</label>
+                    </form>
+                </div>
+            </li>
+            <li class="option-bar__item item-gender">
+                <button  class="option-bar__btn">
+                    <div class="option-bar--gender">gender</div>
+                </button>
+                <div class = 'option-bar__inner-radio'>
+                    <form class="option-bar__form--gender">
+                        <input type="radio" id="gender-male" name="gender" value="male">
+                        <input type="radio" id="gender-female" name="gender" value="female">
+                        <input type="radio" id="gender-unisex" name="gender" value="unisex">
+                        <input type="radio" id="gender-all" name="gender" value="all" checked>
+
+                        <label class="option-bar__radio-item" for="gender-male">male</label>
+                        <label class="option-bar__radio-item" for="gender-female">female</label>
+                        <label class="option-bar__radio-item" for="gender-unisex">unisex</label>
+                        <label class="option-bar__radio-item" for="gender-all">all</label>
+                    </form>
+                </div>
+            </li>
+            <li class="option-bar__item item-sale">
+                <button class="option-bar__btn">
+                    <div class="option-bar__btn--sale">sale</div>
+                </button>
+                <div class="option-bar__sale-menu">
+                    <form class="option-bar__sale-inner">
+                        <input type="radio" id="discounted" name="sale" value="discounted">
+                        <input type="radio" id="all"        name="sale" value="all" checked>
+
+                        <label class="option-bar__sale-item" for="discounted">discounted</label>
+                        <label class="option-bar__sale-item" for="all">all</label>
+                    </form>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- каталог товаров -->
+    <div class="wrapper-shop">
+        <section id = 'container' class = "item-container"></section>
+    </div>
+    <!-- корзина -->
+    <aside id = 'shopping-cart' class = 'cart-container'></aside>
+
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__content">
+                <div class="footer__list-title">Media content sources</div>
+                <ul class="footer__list">
+                    <li class="footer__item"><a class="footer__link" href="https://www.gucci.com/" target="_blank">Gucci</a></li>
+                    <li class="footer__item"><a class="footer__link" href="https://goldapple.ru/" target="_blank">Gold Apple</a></li>
+                </ul>
+            </div>
+            <div class="footer__content">
+                <ul class="footer__list list-creator">
+                    <li class="footer__item"><a href="mailto:daygreyki@gmail.com" class="footer__link">Polina Ruleva</a></li>
+                    <li class="footer__item">IKBO-32-21</li>
+                    <li class="footer__item">RTU MIREA</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/root.js"></script>
+    <script src="../utils/localStorageUtil.js"></script>
+    <script src="../Catalog/catalog.js"></script>
+    <script src="../js/products.js"></script>
+    <script src="../js/header.js"></script>
+    <script src="../js/shopping-cart.js"></script>
+    <script src="../js/header-scroll.js"></script>
+    <script src="../js/side-menu.js"></script>
+    <script src="../js/option-bar-scroll.js"></script>
+    <script src="../js/sort.js"></script>
+
+</body>
+</html>

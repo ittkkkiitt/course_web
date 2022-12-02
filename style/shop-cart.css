@@ -1,0 +1,74 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+.cart-container {
+    display: none;
+    font-family: var(--strict-font);
+    position: fixed;
+    width: 100%;
+    right:0;
+    top:0;
+    padding-top: 0;
+    min-width: 320px;
+    height: 100vh;
+    z-index: 6;
+    overflow-y: scroll;
+}
+@media (min-width: 768px){
+    .cart-container {
+        width: 45%;
+    }
+}
+.cart-container__item-img {
+    width: 200px;
+    height: 250px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.cart-container__item {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-bottom: 0.5px solid black;
+}
+.cart-container__inner {
+    border: 0.5px solid gray;
+    background-color: white;
+}
+.cart-container__total{
+   font-weight: bold;
+   font-size: 20px;
+   text-align: end;
+   padding: 10px;
+}
+.cart-container__caption-inner {
+    padding: 10px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+}
+.header-scroll > .header__icon-container > .active path{
+    stroke: rgb(0, 0, 0);
+}
+.close-cart-btn {
+    width: 100%;
+    text-align: end;
+    padding: 20px;
+}

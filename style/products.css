@@ -1,0 +1,173 @@
+.shop-item {
+  font-family: var(--strict-font);
+  display: inline-block;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  position: relative;
+  text-align: center;
+  font-weight: 400;
+  margin: 0;
+  width: 220px;
+  height: 360px;
+  padding: 10px;
+  }
+.shop-item__img {
+  background-position:center center;
+  background-size:cover;
+  width: 200px;
+  height: 250px;
+  border-radius: 5px;
+}
+.shop-item__price {
+  font-weight:400;
+  margin-top: 10px;
+  font-size: large;
+}
+
+.shop-item__name {
+position: relative;
+margin-top: 10px;
+}
+.shop-item__new-price, .shop-item__old-price {
+  margin-top: 0;
+}
+
+.shop-item__sale {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.shop-item__old-price {
+  text-decoration: line-through;
+}
+.shop-item__new-price {
+ color: var(--deep-red);
+ font-size: 18px;
+ margin-left: 8px;
+}
+.shop-inner-text:hover {
+  cursor: pointer;
+}
+.shop-inner-text {
+  z-index: 2;
+  font-size: 20px;
+  width: 45px;
+  height: 45px;
+  font-weight: 900;
+  top: 7%;
+  left: 10%;
+  position: absolute;
+  color: white;
+  background-size: 45px;
+  background-repeat: no-repeat;
+  background-image: url('../style/Img/interface/plus-gray-theme.svg');
+}
+.shop-item--active {
+  z-index: 2;
+  font-size: 20px;
+  opacity: 0.7;
+  font-weight: 900;
+  width: 45px;
+  height: 45px;
+  top: 7%;
+  left: 10%;
+  position: absolute;
+  color: white;
+  background-repeat: no-repeat;
+  background-size: 40px;
+  background-image: url('../style/Img/interface/minus.svg');
+}
+
+.wrapper-shop {
+width: 100%;
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-pack: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+}
+.item-container {
+    width: 90%;
+    padding: 20px 0 0 0;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display:-ms-grid;
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px,1fr));
+    grid-template-rows:repeat(auto-fill,340px);
+    gap: 20px;
+}
+@media (max-width:777px){
+  .item-container {
+      grid-template-columns: repeat(auto-fill, 220px);
+      grid-template-rows:repeat(auto-fit,340px);
+    }
+}
+.shop-inner-text:hover,  .shop-inner-text:focus {
+  opacity: 1;
+}
+.shop-item:hover > .shop-item__img {
+  -webkit-filter: brightness(0.8);
+          filter: brightness(0.8);
+  background-repeat: no-repeat;
+}
+
+.shop-item--active + .shop-item__img {
+  -webkit-filter: brightness(0.8);
+          filter: brightness(0.8);
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .shop-item:focus .shop-inner-text:not(.shop-item--active) + .shop-item__img,
+    .shop-item:hover .shop-inner-text:not(.shop-item--active) + .shop-item__img {
+      -webkit-filter: none;
+              filter: none;
+  }
+  .shop-item:focus .shop-item--active + .shop-item__img,
+  .shop-item:hover .shop-item--active+ .shop-item__img
+   {
+      -webkit-filter: brightness(0.8);
+              filter: brightness(0.8);
+  }
+
+.shop-item > .shop-item--active + .shop-item__img {
+      -webkit-filter: brightness(0.8);
+              filter: brightness(0.8);
+
+  }
+}
+[data-aviable='false'] .shop-item__img{
+position: relative;
+-webkit-filter: grayscale(1) brightness(0.5);
+        filter: grayscale(1) brightness(0.5);
+}
+[data-aviable='false']:hover .shop-item__img{
+-webkit-filter: grayscale(1) brightness(0.5);
+        filter: grayscale(1) brightness(0.5);
+}
+[data-aviable='false']::after{
+  position: absolute;
+  width: 130px;
+  font-size: 20px;
+  display: inline-block;
+  color: red;
+  content: "sold out";
+  letter-spacing: 3px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-family: var(--strict-font);
+  top: 35%;
+  left: 21%;
+}
