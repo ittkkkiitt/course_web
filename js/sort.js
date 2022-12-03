@@ -1,6 +1,9 @@
-document.querySelector('#sort-to-max').onclick = sortToMax;
-document.querySelector('#sort-to-min').onclick = sortToMin;
-document.querySelector('#reset').onclick = reset;
+document.addEventListener('DOMContentLoaded', () => {
+
+document.querySelector('#sort-to-max').addEventListener('click', sortToMax);
+document.querySelector('#sort-to-min').addEventListener('click', sortToMin);
+document.querySelector('#reset').addEventListener('click', reset);
+
 function sortToMax(){
     let items = document.querySelector('.item-container');
     for (let i = 0; i<items.children.length; i++){
@@ -12,21 +15,21 @@ function sortToMax(){
 
         }
     }
-} 
+}
 
-function sortToMin() { 
+function sortToMin() {
     let items = document.querySelector('.item-container');
     for (let i = 0; i<items.children.length; i++){
         for (let j = i; j<items.children.length; j++){
             if (+items.children[i].getAttribute('data-sort') < +items.children[j].getAttribute('data-sort')){
                 replaceNode = items.replaceChild(items.children[j], items.children[i]);
                 pushElem(replaceNode, items.children[i]);
-            }   
+            }
         }
     }
-   
-} 
-  
+
+}
+
 function reset()  {
     let items = document.querySelector('.item-container');
     for (let i = 0; i<items.children.length; i++){
@@ -42,12 +45,13 @@ function reset()  {
 
 
 let optBarSelect = document.querySelector('.option-bar__form--gender');
-let optBarSelectSale = document.querySelector('.option-bar__sale-inner');
+let optBarSelectSale = document.querySelector('.option-bar__form--sale');
 
-optBarSelect.addEventListener('click',  sortFunc);
-optBarSelectSale.addEventListener('click',  sortFunc);
+optBarSelect.addEventListener('click',  filterGoods);
+optBarSelectSale.addEventListener('click',  filterGoods);
 
-function sortFunc() {
+
+function filterGoods() {
     let chooseGenderElem = document.querySelector('input[name="gender"]:checked').value;
     let chooseSaleElem = document.querySelector('input[name="sale"]:checked').value;
     console.log(chooseSaleElem);
@@ -59,7 +63,7 @@ function sortFunc() {
         }
         else if (it.children[i].dataset.gender!=chooseGenderElem) {
             it.children[i].style.display='none';
-        } 
+        }
         else {
             it.children[i].style.display='inline-block';
         }
@@ -73,7 +77,7 @@ function sortFunc() {
         }
         else if (it.children[i].dataset.gender!=chooseGenderElem) {
             it.children[i].style.display='none';
-        } 
+        }
         else {
             it.children[i].style.display='inline-block';
         }
@@ -84,3 +88,4 @@ function sortFunc() {
 function pushElem(elem, repElem) {
     return repElem.parentNode.insertBefore(elem, repElem.nextSibling);
 }
+});
