@@ -1,0 +1,252 @@
+html, body {
+    position: relative;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+body {
+    font-family: $main-font;
+    font-size: 14px;
+    max-height: 100vh;
+    color:black;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+.aside {
+    position: fixed;
+    z-index: 3;
+}
+.container {
+ top: 100px;
+ position: absolute;
+  width: 100%;
+  overflow-x: hidden;
+  height: auto;
+}
+.swiper-container {
+    width: 100%;
+    height: calc(100% - 100px);
+}
+.swiper-slide {
+    opacity: 0;
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.swiper-slide-active{
+    opacity: 1;
+}
+.swiper-button-prev, .swiper-button-next {
+    z-index: 2;
+}
+.header {
+    border: none;
+    position: absolute;
+    color: black;
+}
+.header__link {
+    color: black;
+}
+.discount-item {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.discount-item__img {
+    max-width: 200px;
+    height: auto;
+
+    @media (min-width:$tablet) {
+            height: auto;
+            min-width: 300px;
+    }
+    @media (min-width:$desktop) {
+            height: auto;
+            min-width: 500px;
+    }
+}
+.discount-item {
+    margin-bottom: 50px;
+  }
+.discount-item__title {
+    font-size: 50px;
+    letter-spacing: 5px;
+
+    @media (min-width:$desktop) {
+            font-size: 4em;
+    }
+}
+.discount-item__caption {
+    font-size: 18px;
+    letter-spacing: 3px;
+
+    @media (min-width:$desktop) {
+           font-size: 2em;
+    }
+}
+.swiper-slide {
+    .discount-item__img {
+        transition-duration: 0.4s;
+        transform: scale(0.7);
+        opacity: 0;
+    }
+}
+.swiper-slide-active {
+    .discount-item__img {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.discount-item__price {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.discount-item__card {
+    min-width: 300px;
+    margin-bottom: 20px;
+    max-width: 100%;
+}
+.sold-out {
+    color: gray;
+    .discount-item__img {
+        filter: grayscale(0.5);
+    }
+}
+
+.discount-item__price--old {
+    font-size: 30px;
+    text-decoration: line-through;
+    margin-right: 15px;
+    color: $deep-red;
+}
+
+.discount-item__price--new {
+    font-size: 40px;
+}
+
+.header {
+    svg {
+        path {
+            stroke: red;
+        }
+    }
+}
+.discount-item__link {
+    width: 100px;
+    font-family: $strict-font;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: 767px) {
+        margin-left: 20px;
+    }
+}
+.link-decor {
+    margin-right: 7px;
+    font-size: 10px;
+    transform: rotate(90deg);
+}
+
+
+.discount-item__price--old {
+    .sale-count {
+        display: inline-block;
+        font-size: 22px;
+        margin-left: 4px;
+        color: $deep-red;
+        font-weight: 700;
+        font-family: $strict-font;
+    }
+}
+
+@media (min-width:$tablet) {
+    .swiper-container {
+        margin-top: 100px;
+        height: calc(100% - 100px);
+    }
+    .discount-item {
+        display: flex;
+        min-width: 0;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: row;
+    }
+}
+
+
+
+.swiper-button-next {
+    overflow-x: hidden;
+    position: absolute;
+    right: 0;
+    background-image: url('../style/img/swiperbtn.svg');
+    width: 40px;
+    background-size: cover;
+    background-position: center;
+    height: 40px;
+
+    &::after {
+        content: "";
+    }
+}
+.swiper-button-prev {
+    overflow-x: hidden;
+    position: absolute;
+    left: 0;
+    background-image: url('../style/img/swiperbtn.svg');
+    width: 40px;
+    transform: rotate(180deg);
+    background-size: cover;
+    background-position: center;
+    height: 40px;
+
+    &::after {
+        content: "";
+    }
+}
+
+.ticker{
+    height: 20px;
+    width:100%;
+    position: fixed;
+    z-index: 4;
+    bottom: 0px;
+    background: transparent;
+    background-color: $deep-red;
+  }
+.ticker__line {
+    color:white;
+    padding: 2px;
+    font-family: $main-font;
+    text-align:center;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-style: bold ;
+    animation: text 6s infinite linear;
+    padding-left: 100%;
+    letter-spacing: 10px;
+    white-space: nowrap;
+}
+
+@keyframes text {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-160%, 0);
+    }
+}

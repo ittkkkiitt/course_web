@@ -1,0 +1,75 @@
+{
+  "name": "web-last-block",
+  "version": "1.0.0",
+  "description": "## Требования к проекту",
+  "keywords": [
+    "web",
+    "scss",
+    "html",
+    "javascript",
+    "webpack"
+  ],
+  "license": "ISC",
+  "author": "Kata Academy",
+  "main": "index.js",
+  "scripts": {
+    "build-dev": "webpack",
+    "build": "webpack --mode production",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "dev": "webpack --mode development",
+    "start": "webpack-dev-server",
+    "watch": "webpack --mode development --watch",
+    "clear": "rd /s /q /dist"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "Firefox ESR",
+    "not OperaMini All",
+    "not dead"
+  ],
+  "devDependencies": {
+    "@babel/core": "7.5.5",
+    "@babel/preset-env": "7.5.5",
+    "autoprefixer": "^9.6.1",
+    "babel-loader": "8.0.6",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^5.1.2",
+    "css-loader": "^3.6.0",
+    "file-loader": "4.2.0",
+    "gh-pages": "2.1.1",
+    "html-webpack-plugin": "^3.2.0",
+    "http-server": "^14.1.1",
+    "mini-css-extract-plugin": "^0.8.2",
+    "node-sass": "^4.14.1",
+    "optimize-css-assets-webpack-plugin": "^6.0.1",
+    "postcss-loader": "3.0.0",
+    "sass-loader": "7.2.0",
+    "style-loader": "^3.3.1",
+    "terser-webpack-plugin": "^5.3.6",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.3"
+  },
+  "engineStrict": true,
+  "engines": {
+    "node": "~14.18.3",
+    "npm": "~6.14.15"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ittkkkiitt/course.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ittkkkiitt/course/issues"
+  },
+  "homepage": "https://github.com/ittkkkiitt/course#readme"
+}

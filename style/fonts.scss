@@ -1,0 +1,115 @@
+@font-face {
+    font-family: 'Granjon';
+    src: url('../style/fonts/GranjonLTStd-Italic.eot');
+    src: local('Granjon Italic'), local('GranjonLTStd-Italic'),
+        url('../style/fonts/GranjonLTStd-Italic.woff2') format('woff2'),
+        url('../style/fonts/GranjonLTStd-Italic.woff') format('woff'),
+        url('../style/fonts/GranjonLTStd-Italic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Granjon';
+    src: url('../style/fonts/GranjonLTStd-Bold.eot');
+    src: local('Granjon Bold'), local('GranjonLTStd-Bold'),
+        url('../style/fonts/GranjonLTStd-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../style/fonts/GranjonLTStd-Bold.woff2') format('woff2'),
+        url('../style/fonts/GranjonLTStd-Bold.woff') format('woff'),
+        url('../style/fonts/GranjonLTStd-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Granjon';
+    src: url('../style/fonts/GranjonLTStd.eot');
+    src: local('Granjon Roman'), local('GranjonLTStd'),
+        url('../style/fonts/GranjonLTStd.eot?#iefix') format('embedded-opentype'),
+        url('../style/fonts/GranjonLTStd.woff2') format('woff2'),
+        url('../style/fonts/GranjonLTStd.woff') format('woff'),
+        url('../style/fonts/GranjonLTStd.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+@font-face {
+    font-family: 'Graphik';
+    src: url('../style/fonts/Graphik-Medium.eot');
+    src: local('Graphik Medium'), local('Graphik-Medium'),
+        url('../style/fonts/Graphik-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../style/fonts/Graphik-Medium.woff2') format('woff2'),
+        url('../style/fonts/Graphik-Medium.woff') format('woff'),
+        url('../style/fonts/Graphik-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Graphik';
+    src: url('../style/fonts/Graphik-Black.eot');
+    src: local('Graphik Black'), local('Graphik-Black'),
+        url('../style/fonts/Graphik-Black.eot?#iefix') format('embedded-opentype'),
+        url('../style/fonts/Graphik-Black.woff2') format('woff2'),
+        url('../style/fonts/Graphik-Black.woff') format('woff'),
+        url('../style/fonts/Graphik-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Graphik';
+    src: url('../style/fonts/Graphik-Semibold.eot');
+    src: local('Graphik Semibold'), local('Graphik-Semibold'),
+        url('../style/fonts/Graphik-Semibold.eot?#iefix') format('embedded-opentype'),
+        url('../style/fonts/Graphik-Semibold.woff2') format('woff2'),
+        url('../style/fonts/Graphik-Semibold.woff') format('woff'),
+        url('../style/fonts/Graphik-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Graphik';
+    src: url('../style/fonts/Graphik-Bold.eot');
+    src: local('Graphik Bold'), local('Graphik-Bold'),
+        url('../style/fonts/Graphik-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../style/fonts/Graphik-Bold.woff2') format('woff2'),
+        url('../style/fonts/Graphik-Bold.woff') format('woff'),
+        url('../style/fonts/Graphik-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Graphik';
+    src: url('../style/fonts/Graphik-Regular.eot');
+    src: local('Graphik Regular'), local('Graphik-Regular'),
+        url('../style/fonts/Graphik-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../style/fonts/Graphik-Regular.woff2') format('woff2'),
+        url('../style/fonts/Graphik-Regular.woff') format('woff'),
+        url('../style/fonts/Graphik-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+@font-face {
+    font-family: 'Mysl';
+    src: url('../style/fonts/Mysl W10 Italic.eot');
+    src: local('Mysl Italic'), local('Mysl-Italic'),
+        url('../style/fonts/Mysl W10 Italic.eot?#iefix') format('embedded-opentype'),
+        url('../style/fonts/Mysl W10 Italic.woff2') format('woff2'),
+        url('../style/fonts/Mysl W10 Italic.woff') format('woff'),
+        url('../style/fonts/Mysl W10 Italic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}

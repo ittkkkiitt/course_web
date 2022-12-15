@@ -1,0 +1,46 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    &::after,&::before {
+        padding: 0;
+        margin: 0;
+    }
+}
+body {
+    background-color:white;
+    color: black;
+    height: 100%;
+    box-sizing: inherit;
+    font-family: $main-font;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    height: 100%;
+}
+
+button {
+    background: transparent;
+    border: none;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+a {
+    text-decoration: none;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+span {
+    display: block;
+    font-size: 15px;
+}
