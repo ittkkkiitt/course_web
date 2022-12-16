@@ -633,15 +633,24 @@ body {
 
 .parallax__slide--1 {
   background-position: top;
-  background-image: url(./static/contacts-shop.jpg); }
+  background-image: url(./static/contacts-min-shop.jpg); }
+  @media (min-width: 768px) {
+    .parallax__slide--1 {
+      background-image: url(./static/contacts-shop.jpg); } }
 
 .parallax__slide--2 {
   background-position: top;
-  background-image: url(./static/contacts-goldapple.jpg); }
+  background-image: url(./static/contacts-min-gold.jpg); }
+  @media (min-width: 768px) {
+    .parallax__slide--2 {
+      background-image: url(./static/contacts-goldapple.jpg); } }
 
 .parallax__slide--3 {
   background-position: top;
-  background-image: url(./static/contacts-sephora.jpeg); }
+  background-image: url(./static/contacts-min-sephora.jpg); }
+  @media (min-width: 768px) {
+    .parallax__slide--3 {
+      background-image: url(./static/contacts-sephora.jpeg); } }
 
 .parallax__logo {
   border-radius: 10px;
@@ -652,11 +661,16 @@ body {
   padding: 5px 0;
   border-bottom: 1px solid transparent;
   transition: .4s; }
-  .parallax__heading:hover, .parallax__heading:focus {
+  .parallax__heading .shop-link:active, .parallax__heading .shop-link:link, .parallax__heading .shop-link:visited {
+    color: white; }
+  .parallax__heading:hover .shop-link, .parallax__heading:focus .shop-link {
     color: white;
     border-bottom: 1px solid white; }
 
-.parallax__heading--highlight:hover, .parallax__heading--highlight:focus {
+.parallax__heading--highlight .shop-link:active, .parallax__heading--highlight .shop-link:link, .parallax__heading--highlight .shop-link:visited {
+  color: white; }
+
+.parallax__heading--highlight:hover .shop-link, .parallax__heading--highlight:focus .shop-link {
   color: #c8ff23;
   border-bottom: 1px solid #c8ff23; }
 
