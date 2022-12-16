@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: 'Granjon';
   src: url(GranjonLTStd-Italic.eot);
@@ -172,7 +173,6 @@ nav a {
   padding: 15px;
   display: grid;
   height: 100px;
-  display: grid;
   grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr;
   font-size: large;
   align-items: center;
@@ -185,7 +185,7 @@ nav a {
       align-items: center; } }
 
 .header__logo {
-  align-self: start;
+  align-self: flex-start;
   width: auto;
   text-align: center; }
 
@@ -549,12 +549,11 @@ label:hover, label:focus {
   display: none; }
 
 .header {
-  transform-style: flat;
+  background-color: rgba(22, 14, 8, 0.9);
+  position: fixed;
   left: 0;
   top: 0;
-  position: fixed;
-  color: white;
-  background-color: transparent;
+  color: rgba(255, 255, 255, 0.765);
   border-bottom: none;
   max-width: 100vw; }
 
@@ -571,132 +570,17 @@ html, body {
   max-width: 100vw;
   height: 100%;
   margin: 0;
-  padding: 0;
-  overflow: hidden; }
-
-.container {
-  max-width: 100vw;
-  min-height: 100%; }
-
-.container {
-  overflow: auto;
-  perspective: 1px;
-  transform-style: preserve-3d; }
-  .container, .container *:not(.header) {
-    transform-style: preserve-3d; }
-
-.container {
-  font-family: "Graphik";
-  color: white;
-  margin: 100px 5%; }
-  .container :nth-child(1) {
-    transform: translateZ(-0.4px);
-    top: -20px;
-    left: 10%; }
-  .container :nth-child(2) {
-    padding-left: 10px;
-    transform: translateZ(0.2px);
-    top: 260px;
-    left: 10%;
-    font-size: 30px; }
-    @media (max-width: 768px) {
-      .container :nth-child(2)::before {
-        z-index: -1;
-        content: "";
-        position: absolute;
-        width: 110%;
-        height: 110%;
-        background-color: rgba(0, 0, 0, 0.418);
-        width: 100%; } }
-  .container :nth-child(3) {
-    padding-left: 10px;
-    box-sizing: border-box;
-    color: #c8ff23;
-    transform: translateZ(-0.3px);
-    top: 420px;
-    font-size: 40px;
-    left: 5%; }
-    .container :nth-child(3)::before {
-      z-index: -1;
-      content: "";
-      position: absolute;
-      width: 110%;
-      height: 110%;
-      background-color: rgba(0, 0, 0, 0.418);
-      width: 100%; }
-  .container :nth-child(4) {
-    padding-left: 10px;
-    transform: translateZ(0.1px);
-    top: 400px;
-    right: 8%;
-    font-size: 32px; }
-    @media (max-width: 768px) {
-      .container :nth-child(4)::before {
-        z-index: -1;
-        content: "";
-        position: absolute;
-        width: 110%;
-        height: 110%;
-        background-color: rgba(0, 0, 0, 0.418);
-        width: 100%; } }
-  .container :nth-child(5) {
-    font-size: 18px;
-    transform: translateZ(-2px);
-    z-index: 2;
-    top: 600px;
-    left: 70%;
-    transform: scale(2); }
-    .container :nth-child(5)::after {
-      transform: scale(0.7);
-      opacity: .99;
-      color: white;
-      content: "Gold Apple";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: auto;
-      height: auto;
-      -webkit-filter: drop-shadow(0 0 0.5px black);
-              filter: drop-shadow(0 0 0.5px black); }
-  .container :nth-child(6) {
-    padding-bottom: 100px;
-    font-size: 18px;
-    transform: translateZ(2px);
-    top: 810px;
-    left: 0;
-    transform: translateY(-50px) scale(0.7); }
-    .container :nth-child(6)::before {
-      transform: scale(2);
-      z-index: -2;
-      top: 50px;
-      right: 0;
-      color: white;
-      content: "Sephora";
-      position: absolute;
-      width: auto;
-      height: auto;
-      -webkit-filter: drop-shadow(0 0 1px black);
-              filter: drop-shadow(0 0 1px black); }
-  .container > * {
-    position: absolute; }
+  padding: 0; }
 
 body {
   font-family: "Granjon";
-  font-weight: 100;
-  background-size: cover;
-  background-image: url(./static/contacts-bg.jpg);
-  background-position-x: 30%;
-  -webkit-filter: brightness(0.8);
-          filter: brightness(0.8);
-  line-height: 1; }
-
-h2 {
-  font-size: 3em;
-  transform: translateZ(0.2px); }
+  line-height: 1;
+  background-color: white; }
 
 .header__logo {
   width: auto;
-  text-align: center; }
+  text-align: center;
+  align-self: flex-start; }
 
 .header__nav {
   text-align: center; }
@@ -705,26 +589,76 @@ h2 {
       display: grid;
       grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr; } }
 
-.arrow-img {
-  margin: -80px 0 0 -100px;
-  transform: scale(2);
-  width: 60px;
-  height: 60px;
+.header__link {
+  color: white; }
+
+.parallax-container {
+  font-family: "Graphik";
+  scroll-behavior: smooth;
+  height: 100vh; }
+
+.parallax__slide {
+  font-family: "Graphik";
+  height: 100vh;
+  background-position: top;
+  background-repeat: no-repeat;
   background-size: cover;
-  transform: scale(2);
-  background-image: url(./static/iconDown.png); }
+  background-attachment: fixed; }
+  .parallax__slide:first-of-type::before {
+    font-size: 2em;
+    padding: 10px 0 0 10px;
+    line-height: 45px;
+    text-transform: uppercase;
+    color: #c8ff23;
+    content: "look for us in offline stores ↴";
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(22, 14, 8, 0.59);
+    -webkit-filter: drop-shadow(0 0 0.5px black);
+            filter: drop-shadow(0 0 0.5px black); }
 
-.contact-logo {
-  width: 60%;
-  padding: 10px;
-  height: auto;
-  border-radius: 50%; }
-  .contact-logo:hover {
-    cursor: pointer; }
+.parallax__caption {
+  padding: 0 16px;
+  gap: 16px;
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+  font-family: "Graphik";
+  background-color: #160e08;
+  height: 150px;
+  color: #fff; }
 
-h2 {
-  min-width: 100px;
-  width: 15%; }
+.parallax__slide--1 {
+  background-position: top;
+  background-image: url(./static/contacts-shop.jpg); }
+
+.parallax__slide--2 {
+  background-position: top;
+  background-image: url(./static/contacts-goldapple.jpg); }
+
+.parallax__slide--3 {
+  background-position: top;
+  background-image: url(./static/contacts-sephora.jpeg); }
+
+.parallax__logo {
+  border-radius: 10px;
+  width: 120px;
+  height: 120px; }
+
+.parallax__heading {
+  padding: 5px 0;
+  border-bottom: 1px solid transparent;
+  transition: .4s; }
+  .parallax__heading:hover, .parallax__heading:focus {
+    color: white;
+    border-bottom: 1px solid white; }
+
+.parallax__heading--highlight:hover, .parallax__heading--highlight:focus {
+  color: #c8ff23;
+  border-bottom: 1px solid #c8ff23; }
 
 
 /*# sourceMappingURL=contacts.js.map*/

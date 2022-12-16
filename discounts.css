@@ -172,7 +172,6 @@ nav a {
   padding: 15px;
   display: grid;
   height: 100px;
-  display: grid;
   grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr;
   font-size: large;
   align-items: center;
@@ -185,7 +184,7 @@ nav a {
       align-items: center; } }
 
 .header__logo {
-  align-self: start;
+  align-self: flex-start;
   width: auto;
   text-align: center; }
 
