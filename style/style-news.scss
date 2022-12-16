@@ -60,8 +60,6 @@ body {
 
 }
 
-
-
 .content {
 	display: flex;
     flex-direction: column-reverse;
@@ -73,7 +71,6 @@ body {
     }
 }
 
-
 .content__title {
     font-family: $main-font;
 	font-size: 40px;
@@ -81,6 +78,7 @@ body {
 	margin-top: 10px;
 	line-height: 1em;
 	transition-delay: 0.3s;
+
     @media (min-width:$desktop){
         font-size: 4em;
     }

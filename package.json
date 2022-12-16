@@ -9,7 +9,7 @@
     "javascript",
     "webpack"
   ],
-  "license": "ISC",
+  "license": "",
   "author": "Polina Ruleva",
   "main": "index.js",
   "scripts": {

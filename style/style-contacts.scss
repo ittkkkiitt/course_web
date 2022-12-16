@@ -1,10 +1,9 @@
 .header {
-    transform-style: flat;
+    background-color: rgba(22, 14, 8, 0.9);
+    position: fixed;
     left: 0;
     top: 0;
-    position: fixed;
-    color: white;
-    background-color: transparent;
+    color: rgba(255, 255, 255, 0.765);
     border-bottom: none;
     max-width: 100vw;
 }
@@ -24,225 +23,105 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow: hidden;
   }
-$parallax-perspective : 1 !default;
-$parallax-element     : ".container" !default;
-$parallax-ios         : true !default;
-
-@mixin parallax-init(
-  $perspective  : $parallax-perspective,
-  $element      : $parallax-element,
-  $parallax-ios : $parallax-ios
-  ) {
-  @if $element == ".container" {
-    .container {
-    //   position: relative;
-    //   padding-top: 100px;
-      max-width: 100vw;
-      min-height: 100%;
-    //   overflow: hidden;
-    }
-  }
-  @if $element == "header" {
-    .header {
-        transform-style: flat;
-        left: 0;
-        top: 0;
-        position: fixed;
-        color: white;
-        background-color: transparent;
-        border-bottom: none;
-        max-width: 100vw;
-    }
-}
-  #{$element} {
-    overflow: auto;
-    perspective: $perspective * 1px;
-    transform-style: preserve-3d;
-    @if $parallax-ios == false {
-      -webkit-overflow-scrolling: touch;
-    }
-    &, *:not(.header) {
-      transform-style: preserve-3d;
-    }
-  }
-}
-
-@mixin parallax(
-  $distance    : 0,
-  $perspective : $parallax-perspective
-  ) {
-  transform:
-    translateZ($distance * $perspective * 1px)
-  ;
-}
-
-
-@include parallax-init;
-
-.container {
-    font-family: $strict-font;
-    color: white;
-  :nth-child(1) {
-    @include parallax(-.4);
-    top: -20px;
-    left: 10%;
-  }
-  :nth-child(2) {
-    padding-left: 10px;
-
-    @include parallax(.2);
-    top: 260px;
-    left: 10%;
-    font-size: 30px;
-    @media (max-width:$tablet) {
-        &::before {
-            z-index: -1;
-            content: "";
-            position: absolute;
-            width: 110%;
-            height: 110%;
-            background-color: rgba(0, 0, 0, 0.418);
-            width: 100%;
-        }
-    }
-
-  }
-  :nth-child(3) {
-    padding-left: 10px;
-
-    box-sizing: border-box;
-    // color: rgb(215, 0, 0);
-    color: rgb(200, 255, 35);
-    // background-color: rgba(255, 255, 255, 0.617);
-    // background-color: rgba(0, 0, 0, 0.418);
-    @include parallax(-.3);
-    top: 420px;
-    font-size: 40px;
-    left: 5%;
-        &::before {
-            z-index: -1;
-            content: "";
-            position: absolute;
-            width: 110%;
-            height: 110%;
-            background-color: rgba(0, 0, 0, 0.418);
-            width: 100%;
-        }
-  }
-  :nth-child(4) {
-    padding-left: 10px;
-    @include parallax(.1);
-    top: 400px;
-    right: 8%;
-    font-size: 32px;
-    @media (max-width:$tablet) {
-        &::before {
-            z-index: -1;
-            content: "";
-            position: absolute;
-            width: 110%;
-            height: 110%;
-            background-color: rgba(0, 0, 0, 0.418);
-            width: 100%;
-        }
-    }
-  }
-  :nth-child(5) {
-    font-size: 18px;
-    @include parallax(-2);
-    z-index: 2;
-    top: 600px;
-    left: 70%;
-    transform:scale(2);
-    &::after {
-        transform: scale(0.7);
-        // font-size: 16px;
-        opacity: .99;
-        color: white;
-        content: "Gold Apple";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: auto;
-        height: auto;
-        filter: drop-shadow(0 0 0.5px black);
-        // background-color: rgba(0, 0, 0, 0.418);
-        // width: 100%;
-    }
-  }
-  :nth-child(6) {
-    padding-bottom: 100px;
-    font-size: 18px;
-    @include parallax(2);
-    top: 810px;
-    left: 0;
-    transform: translateY(-50px) scale(0.7);
-    &::before {
-        transform: scale(2);
-        z-index: -2;
-        top: 50px;
-        right: 0;
-        color: white;
-        content: "Sephora";
-        position: absolute;
-        width: auto;
-        height: auto;
-        filter: drop-shadow(0 0 1px rgb(0, 0, 0));
-    }
-  }
-
-  margin: 100px 5%;
-  > * {
-    position: absolute;
-  }
-}
-
 body {
-  font-family: $main-font;
-  font-weight: 100;
-  background-size: cover;
-  background-image: url('./img/contacts-bg.jpg');
-  background-position-x: 30%;
-  filter: brightness(0.8);
-  line-height: 1;
-}
-
-h2 {
-  font-size: 3em;
-  @include parallax(.2);
+    font-family: $main-font;
+    line-height: 1;
+    background-color: rgb(255, 255, 255);
 }
 .header__logo {
     width: auto;
     text-align: center;
+    align-self: flex-start;
 }
 .header__nav {
+
     text-align: center;
     @media(min-width: calc($tablet - 1px)) {
         display: grid;
         grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr;
     }
 }
-.arrow-img {
-    margin: -80px 0 0 -100px;
-    transform: scale(2);
-    width: 60px;
-    height: 60px;
-    background-size: cover;
-    transform: scale(2);
-    background-image: url('./img/iconDown.png');
+.header__link {
+    color: white;
 }
-.contact-logo{
-    width: 60%;
-    padding: 10px;
-    height: auto;
-    border-radius: 50%;
-    &:hover {
-        cursor: pointer;
+
+.parallax-container {
+    font-family: $strict-font;
+    scroll-behavior: smooth;
+    height: 100vh;
+}
+
+  .parallax__slide {
+    font-family: $strict-font;
+    height: 100vh;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    &:first-of-type {
+        &::before {
+        font-size: 2em;
+        padding: 10px 0 0 10px;
+        line-height: 45px;
+        text-transform: uppercase;
+        color: rgb(200, 255, 35);
+        content: "look for us in offline stores ↴";
+        position: absolute;
+        top: 40%;
+        left: 25%;
+        width: 200px;
+        height: 200px;
+        background-color: rgba(22, 14, 8, 0.59);
+        filter: drop-shadow(0 0 0.5px black);
+        }
+    }
+  }
+
+  .parallax__caption {
+    padding: 0 16px;
+    gap: 16px;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    font-family: $strict-font;
+    background-color: rgb(22,14,8);
+    height: 150px;
+    color: #fff;
+  }
+
+  .parallax__slide--1 {
+    background-position: top;
+    background-image: url("./img/contacts-shop.jpg");
+  }
+
+  .parallax__slide--2 {
+    background-position: top;
+    background-image: url("./img/contacts-goldapple.jpg")
+  }
+  .parallax__slide--3 {
+    background-position: top;
+    background-image: url("./img/contacts-sephora.jpeg")
+  }
+.parallax__logo {
+    border-radius: 10px;
+    width: 120px;
+    height: 120px;
+}
+
+.parallax__heading {
+    padding: 5px 0;
+    border-bottom: 1px solid transparent;
+    transition: .4s;
+
+    &:hover, &:focus {
+        color: white;
+        border-bottom: 1px solid white;
     }
 }
-h2 {
-    min-width: 100px;
-    width: 15%;
+.parallax__heading--highlight {
+    &:hover, &:focus {
+        color: rgb(200, 255, 35);
+        border-bottom: 1px solid rgb(200, 255, 35);
+    }
 }

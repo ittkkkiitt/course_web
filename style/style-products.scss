@@ -119,11 +119,15 @@
       }
 }
 
-  .shop-item:hover > .shop-item__img {
-        filter: brightness(0.8);
+.shop-item {
+    &:hover {
+        > .shop-item__img {
+            filter: brightness(0.8);
+        }
   }
+}
 
-  .shop-item--active + .shop-item__img {
+.shop-item--active + .shop-item__img {
             filter: brightness(0.8);
   }
 

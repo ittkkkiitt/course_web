@@ -88,24 +88,21 @@ nav {
 .header__nav {
     padding: 15px;
     display: grid;
-    // display: flex;
     height:100px;
-    display: grid;
     grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr;
     font-size: large;
     align-items: center;
     flex-direction: row;
-    // justify-content: space-evenly;
     text-align: center;
     @media(max-width:$tablet) {
         display: flex;
-       justify-content: center;
-       align-items: center;
+        justify-content: center;
+        align-items: center;
     }
  }
 
  .header__logo {
-        align-self: start;
+        align-self: flex-start;
         width: auto;
         text-align: center;
 }
@@ -147,10 +144,6 @@ ul {
     column-gap: 10%;
     grid-template-columns: repeat(2, 1fr);
 
-    // @media (min-width: $tablet) {
-    //     // grid-template-columns: repeat(2, minmax(200px,1fr));
-    // }
-
     @media (min-width: $desktop) {
         align-items: center;
         display: flex;
@@ -163,7 +156,6 @@ ul {
   position: relative;
   font-size: 16px;
   padding: 20px 0 10px 0;
-//   max-width: 150px;
   &:hover {
     cursor: pointer;
   }
