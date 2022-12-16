@@ -50,54 +50,6 @@ let optBarSelectSale = document.querySelector('.option-bar__form--sale');
 optBarSelect.addEventListener('click',  filterGoodsForGender);
 optBarSelectSale.addEventListener('click',  filterGoodsForSale);
 
-
-// function filterGoods() {
-//     let chooseGenderElem = document.querySelector('input[name="gender"]:checked').value;
-//     let chooseSaleElem = document.querySelector('input[name="sale"]:checked').value;
-//     console.log(chooseSaleElem);
-//    let it = document.getElementsByClassName("item-container")[0];
-//    for (let i = 0; i<it.children.length; i++){
-//     if (chooseSaleElem == 'all') {
-//         if (chooseGenderElem == 'all') {
-//             // it.children[i].style.display='inline-block';
-//             it.children[i].classList.remove('item--hide');
-
-//         }
-//         else if (it.children[i].dataset.gender!=chooseGenderElem) {
-//             // it.children[i].style.display='none';
-//             it.children[i].classList.add('item--hide');
-
-//         }
-//         else {
-//             // it.children[i].style.display='inline-block';
-//             it.children[i].classList.remove('item--hide');
-
-//         }
-//     }
-//     else if (+it.children[i].dataset.sale==0) {
-//                 // it.children[i].style.display='none';
-//             it.children[i].classList.add('item--hide');
-
-//             }
-//     else {
-//         if (chooseGenderElem == 'all') {
-//             // it.children[i].style.display='inline-block';
-//             it.children[i].classList.remove('item--hide');
-
-
-//         }
-//         else if (it.children[i].dataset.gender!=chooseGenderElem) {
-//             // it.children[i].style.display='none';
-//             it.children[i].classList.add('item--hide');
-
-//         }
-//         else {
-//             // it.children[i].style.display='inline-block';
-//             it.children[i].classList.remove('item--hide');
-//         }
-//     }
-//    }
-// };
 function filterGoodsForGender() {
     let chooseGenderElem = document.querySelector('input[name="gender"]:checked').value;
     let it = document.getElementsByClassName("item-container")[0];
@@ -124,8 +76,8 @@ function filterGoodsForSale() {
             }
         }
 }
-function pushElem(elem, repElem) {
-    return repElem.parentNode.insertBefore(elem, repElem.nextSibling);
-}
+    function pushElem(elem, repElem) {
+        return repElem.parentNode.insertBefore(elem, repElem.nextSibling);
+    }
 
 });

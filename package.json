@@ -1,7 +1,7 @@
 {
-  "name": "web-last-block",
+  "name": "course_web",
   "version": "1.0.0",
-  "description": "## Требования к проекту",
+  "description": "course",
   "keywords": [
     "web",
     "scss",
@@ -10,7 +10,7 @@
     "webpack"
   ],
   "license": "ISC",
-  "author": "Kata Academy",
+  "author": "Polina Ruleva",
   "main": "index.js",
   "scripts": {
     "build-dev": "webpack",
@@ -66,10 +66,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ittkkkiitt/course.git"
+    "url": "git+https://github.com/ittkkkiitt/course_web.git"
   },
   "bugs": {
-    "url": "https://github.com/ittkkkiitt/course/issues"
+    "url": "https://github.com/ittkkkiitt/course_web/issues"
   },
-  "homepage": "https://github.com/ittkkkiitt/course#readme"
+  "homepage": "https://github.com/ittkkkiitt/course_web#readme"
 }

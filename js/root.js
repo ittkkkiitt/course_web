@@ -86,9 +86,7 @@ class Products {
             `;
 
         });
-
         let html = htmlCatalog;
-        // ROOT_PRODUCTS.innerHTML = html;
         ROOT_PRODUCTS.insertAdjacentHTML('afterbegin', html);
     }
 }
@@ -180,12 +178,10 @@ document.querySelector('#search-input').oninput = function() {
         searchItems.forEach(function(el){
             if (el.textContent.toLowerCase().search(val) == -1) {
                 el.closest('.shop-item').classList.add('item--hide-search');
-                console.log('add hide');
             }
             else {
                 if (el.closest('.shop-item').classList.contains('item--hide-search')) {
                     el.closest('.shop-item').classList.remove('item--hide-search');
-                    console.log('remove hide');
                 }
             }
         });
