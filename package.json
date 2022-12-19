@@ -23,9 +23,9 @@
     "clear": "rd /s /q /dist"
   },
   "browserslist": [
+    "> 0.5%",
     "last 2 versions",
     "Firefox ESR",
-    "not OperaMini All",
     "not dead"
   ],
   "devDependencies": {

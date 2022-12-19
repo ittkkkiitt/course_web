@@ -22,15 +22,15 @@ body {
     z-index: 3;
 }
 .container {
- top: 100px;
+ padding-top: 100px;
  position: absolute;
   width: 100%;
   overflow-x: hidden;
-  height: auto;
+  height: calc(100vh - 100px);
 }
 .swiper-container {
     width: 100%;
-    height: calc(100% - 100px);
+    height: 100%;
 }
 .swiper-slide {
     opacity: 0;
@@ -63,17 +63,9 @@ body {
     align-items: center;
 }
 .discount-item__img {
-    max-width: 200px;
+    max-width: 40%;
     height: auto;
 
-    @media (min-width:$tablet) {
-            height: auto;
-            min-width: 300px;
-    }
-    @media (min-width:$desktop) {
-            height: auto;
-            min-width: 500px;
-    }
 }
 .discount-item {
     margin-bottom: 50px;
@@ -145,12 +137,12 @@ body {
     }
 }
 .discount-item__link {
-    width: 100px;
+    width: 90%;
     font-family: $strict-font;
     display: flex;
     justify-content: center;
     align-items: center;
-
+    font-size: medium;
     @media (max-width: 767px) {
         margin-left: 20px;
     }

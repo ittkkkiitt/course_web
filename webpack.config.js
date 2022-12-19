@@ -14,19 +14,20 @@ let multipleHtmlPlugins = htmlPageNames.map(name => {
 
 
 module.exports = {
-  entry: {
-    index: './js/index.js',
-    discounts : './js/discounts.js',
-    news : './js/news.js',
-    shop : './js/shop.js',
-    contacts : './js/contacts.js'
-  },
+    // Входные точки
+    entry: {
+        index: './js/index.js',
+        discounts : './js/discounts.js',
+        news : './js/news.js',
+        shop : './js/shop.js',
+        contacts : './js/contacts.js'
+    },
 
-  // Выходной файл
-  output: {
-    filename: './js/[name].js',
-    sourceMapFilename: "[name].js.map"
-  },
+  // Файлы на выходе
+    output: {
+        filename: './js/[name].js',
+        sourceMapFilename: "[name].js.map"
+    },
 
 
   // Source maps для удобства отладки
@@ -34,7 +35,7 @@ module.exports = {
 
   module: {
     rules: [
-      // Транспилируем js с babel
+      // Транспиляция js в babel
       {
         test: /\.js$/,
         include: path.resolve(__dirname, 'src/js'),
@@ -47,18 +48,18 @@ module.exports = {
         }
       },
 
-      // Компилируем SCSS в CSS
+      // Компиляция SCSS в CSS
       {
         test: /\.scss$/,
         use: [
-          MiniCssExtractPlugin.loader, // Extract css to separate file
-          'css-loader', // translates CSS into CommonJS
-          'postcss-loader', // parse CSS and add vendor prefixes to CSS rules
-          'sass-loader', // compiles Sass to CSS, using Node Sass by default
+          MiniCssExtractPlugin.loader,
+          'css-loader', // перевод CSS в формат CommonJS
+          'postcss-loader', // пост-обработка CSS и добавление ведорных префиксов CSS-правилам
+          'sass-loader', // преобразование Sass в CSS
         ],
       },
 
-      // Подключаем шрифты из css
+      // Подключение шрифтов из css
       {
         test: /\.(eot|ttf|woff|woff2)$/,
         loader: 'file-loader',
@@ -67,7 +68,7 @@ module.exports = {
         }
       },
 
-      // Подключаем картинки из css
+      // Подключение картинок из css
       {
         test: /\.(svg|png|jpg|jpeg|webp)$/,
         use: [
@@ -80,18 +81,18 @@ module.exports = {
   },
   plugins: [
     require('autoprefixer'),
-    // Подключаем файл html, стили и скрипты встроятся автоматически
+    // Подключение файлов html
     new HtmlWebpackPlugin({
       template: 'index.html',
       chunks: ['index']
     }),
 
-    // Кладем стили в отдельный файлик
+    // Кладем стили в отдельный CSS файл
     new MiniCssExtractPlugin({
         filename: "[name].css",
     }),
 
-    // Копируем картинки
+    // Копирование картинок и шрифтов
     new CopyWebpackPlugin([
       {
         from: './style/Img',
@@ -103,4 +104,5 @@ module.exports = {
       },
     ])
   ].concat(multipleHtmlPlugins),
+  // создание еще четырех html-страниц
 };

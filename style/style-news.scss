@@ -21,8 +21,11 @@ body {
 }
 
 .container {
+    position: absolute;
+    box-sizing: border-box;
 	justify-content: center;
 	width: 100%;
+    height: 100vh;
 	display: flex;
 	background-color: #ffffff;
 	padding: 50px;
@@ -121,6 +124,9 @@ body {
 }
 
 .image-box{
+
+    max-width: 100%;
+    height: auto;
 	margin-left: 0;
     @media (max-width: $tablet) {
         margin-left: 0;
@@ -130,17 +136,18 @@ body {
 
 
 .right-section__item-img {
-   width: 300px;
+   transform: scale(1.4);
+   max-width: 100%;
    height: auto;
 
-   @media (min-width: $tablet) {
-        width: 400px;
-        height: auto;
-        min-width: 300px;
-    }
-    @media (min-width:$desktop) {
-        min-width: 600px;
-    }
+//    @media (min-width: $tablet) {
+//         // width: 400px;
+//         height: auto;
+//         min-width: 300px;
+//     }
+//     @media (min-width:$desktop) {
+//         min-width: 600px;
+//     }
 
 }
 

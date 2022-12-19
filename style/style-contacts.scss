@@ -48,7 +48,6 @@ body {
 
 .parallax-container {
     font-family: $strict-font;
-    scroll-behavior: smooth;
     height: 100vh;
 }
 
@@ -59,6 +58,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+
     &:first-of-type {
         &::before {
         font-size: 2em;
@@ -76,6 +76,7 @@ body {
         filter: drop-shadow(0 0 0.5px black);
         }
     }
+
   }
 
   .parallax__caption {
@@ -92,16 +93,26 @@ body {
 
   .parallax__slide--1 {
     background-position: top;
-    background-image: url("./img/contacts-shop.jpg");
+    background-image: url("./img/contacts-min-shop.jpg");
+    @media (min-width: $tablet) {
+        background-image: url("./img/contacts-shop.jpg");
+    }
   }
 
   .parallax__slide--2 {
     background-position: top;
-    background-image: url("./img/contacts-goldapple.jpg")
+    background-image: url("./img/contacts-min-gold.jpg");
+    @media (min-width: $tablet) {
+        background-image: url("./img/contacts-goldapple.jpg")
+    }
   }
   .parallax__slide--3 {
     background-position: top;
-    background-image: url("./img/contacts-sephora.jpeg")
+    background-image: url("./img/contacts-min-sephora.jpg");
+
+    @media (min-width: $tablet) {
+        background-image: url("./img/contacts-sephora.jpeg")
+    }
   }
 .parallax__logo {
     border-radius: 10px;
@@ -113,15 +124,30 @@ body {
     padding: 5px 0;
     border-bottom: 1px solid transparent;
     transition: .4s;
-
+    .shop-link {
+        &:active,&:link,&:visited
+        {
+            color: white;
+        }
+    }
     &:hover, &:focus {
-        color: white;
-        border-bottom: 1px solid white;
+        .shop-link {
+            color: white;
+            border-bottom: 1px solid white;
+        }
     }
 }
 .parallax__heading--highlight {
+    .shop-link {
+        &:active,&:link,&:visited
+        {
+            color: white;
+        }
+    }
     &:hover, &:focus {
-        color: rgb(200, 255, 35);
-        border-bottom: 1px solid rgb(200, 255, 35);
+        .shop-link {
+            color: rgb(200, 255, 35);
+            border-bottom: 1px solid rgb(200, 255, 35);
+        }
     }
 }
