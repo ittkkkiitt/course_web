@@ -714,8 +714,7 @@ label:hover, label:focus {
   @media (max-width: 777px) {
     .item-container {
       gap: 10px;
-      grid-template-columns: repeat(auto-fill, 220px);
-      grid-template-rows: repeat(auto-fit, 340px); } }
+      grid-template-columns: repeat(auto-fill, 220px); } }
 
 .shop-item:hover > .shop-item__img {
   -webkit-filter: brightness(0.8);

@@ -594,7 +594,6 @@ body {
 
 .parallax-container {
   font-family: "Graphik";
-  scroll-behavior: smooth;
   height: 100vh; }
 
 .parallax__slide {
