@@ -547,6 +547,105 @@ label:hover, label:focus {
 .shop-item.item--hide-search {
   display: none; }
 
+.checkout {
+  display: none;
+  display: flex;
+  z-index: 10;
+  width: 90%;
+  height: auto;
+  background-color: white;
+  position: absolute;
+  flex-direction: row;
+  border-radius: 10px; }
+
+.checkout {
+  display: flex;
+  font-family: "Graphik";
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: transparent;
+  right: 0;
+  top: 0;
+  padding-top: 0;
+  min-width: 320px;
+  width: 100vw;
+  min-height: 100%;
+  z-index: 6; }
+  .checkout::before {
+    content: "";
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.789);
+    z-index: -1; }
+
+.checkout__inner {
+  position: relative;
+  border: 0.5px solid rgba(0, 0, 0, 0.118);
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: auto;
+  background-color: white; }
+
+.checkout__form {
+  display: flex;
+  align-items: center;
+  flex-direction: column; }
+
+.checkout__heading {
+  margin-bottom: 20px; }
+
+.checkout__item {
+  width: 100%;
+  margin: 10px 0;
+  align-self: flex-start;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr; }
+
+.checkout__area {
+  border-radius: 5px;
+  text-align: center;
+  height: 40px;
+  border: 1.5px solid black;
+  width: 120px; }
+
+.checkout__btn {
+  transition: .4s;
+  margin-top: 60px;
+  font-weight: 800;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  border: 2px solid black; }
+  .checkout__btn:hover, .checkout__btn:focus {
+    background-color: black;
+    color: white;
+    transform: scale(1.2); }
+
+.check-error {
+  border-color: red; }
+
+.btn-post {
+  transition: .4s;
+  background-color: greenyellow;
+  color: black; }
+
+.check-hide {
+  display: none; }
+
+.check-btn--close {
+  position: absolute;
+  top: 10px;
+  right: 10px; }
+
 a {
   text-decoration: none;
   color: black; }
