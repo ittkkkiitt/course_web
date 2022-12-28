@@ -547,10 +547,6 @@ label:hover, label:focus {
 .shop-item.item--hide-search {
   display: none; }
 
-html, body {
-  position: relative;
-  height: 100%; }
-
 a {
   text-decoration: none;
   color: #000; }
@@ -562,7 +558,7 @@ body {
   color: black;
   margin: 0;
   padding: 0;
-  overflow-x: hidden; }
+  overflow: hidden; }
 
 .aside {
   position: fixed;
@@ -609,8 +605,12 @@ body {
   justify-content: center;
   align-items: center; }
 
+.swiper-slide {
+  padding: 0 20px; }
+
 .discount-item__img {
-  max-width: 40%;
+  max-width: 50%;
+  max-height: 100%;
   height: auto; }
 
 .discount-item {

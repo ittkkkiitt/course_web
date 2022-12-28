@@ -629,48 +629,59 @@ body {
   background-color: #160e08;
   height: 150px;
   color: #fff; }
+  @media (min-width: 375px) {
+    .parallax__caption:hover .parallax__description, .parallax__caption:focus .parallax__description {
+      letter-spacing: 2px; } }
+  @media (min-width: 768px) {
+    .parallax__caption:hover .parallax__description, .parallax__caption:focus .parallax__description {
+      letter-spacing: 3px; } }
+  @media (min-width: 1120px) {
+    .parallax__caption:hover .parallax__description, .parallax__caption:focus .parallax__description {
+      transform: scale(1.15); } }
+  @media (min-width: 1366px) {
+    .parallax__caption:hover .parallax__description, .parallax__caption:focus .parallax__description {
+      transform: scale(1.3);
+      letter-spacing: 3.5px; } }
+  .parallax__caption:hover .parallax__heading--highlight .shop-link, .parallax__caption:focus .parallax__heading--highlight .shop-link {
+    color: #c8ff23; }
+  .parallax__caption:hover .parallax__heading--highlight ~ .parallax__description, .parallax__caption:focus .parallax__heading--highlight ~ .parallax__description {
+    color: #c8ff23; }
 
 .parallax__slide--1 {
   background-position: top;
-  background-image: url(./static/contacts-min-shop.jpg); }
-  @media (min-width: 768px) {
-    .parallax__slide--1 {
-      background-image: url(./static/contacts-shop.jpg); } }
+  background-image: url(./static/contacts-shop.jpg); }
 
 .parallax__slide--2 {
   background-position: top;
-  background-image: url(./static/contacts-min-gold.jpg); }
-  @media (min-width: 768px) {
-    .parallax__slide--2 {
-      background-image: url(./static/contacts-goldapple.jpg); } }
+  background-image: url(./static/contacts-goldapple.jpg); }
 
 .parallax__slide--3 {
   background-position: top;
-  background-image: url(./static/contacts-min-sephora.jpg); }
-  @media (min-width: 768px) {
-    .parallax__slide--3 {
-      background-image: url(./static/contacts-sephora.jpeg); } }
+  background-image: url(./static/contacts-sephora.jpeg); }
 
 .parallax__logo {
   border-radius: 10px;
   width: 120px;
   height: 120px; }
 
+.parallax__description {
+  transition: .4s; }
+
 .parallax__heading {
   padding: 5px 0;
-  border-bottom: 1px solid transparent;
+  border-bottom: 1px solid #160e08;
   transition: .4s; }
   .parallax__heading .shop-link:active, .parallax__heading .shop-link:link, .parallax__heading .shop-link:visited {
     color: white; }
   .parallax__heading:hover .shop-link, .parallax__heading:focus .shop-link {
     color: white;
+    transition: 0;
     border-bottom: 1px solid white; }
 
 .parallax__heading--highlight .shop-link:active, .parallax__heading--highlight .shop-link:link, .parallax__heading--highlight .shop-link:visited {
   color: white; }
 
 .parallax__heading--highlight:hover .shop-link, .parallax__heading--highlight:focus .shop-link {
-  color: #c8ff23;
   border-bottom: 1px solid #c8ff23; }
 
 

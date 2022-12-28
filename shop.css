@@ -603,6 +603,9 @@ label:hover, label:focus {
   justify-content: space-evenly;
   align-items: flex-end; }
 
+.cart-container__total {
+  align-self: flex-end; }
+
 .close-cart-btn {
   width: 100%;
   text-align: end;
