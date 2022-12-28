@@ -143,13 +143,18 @@ class Shop {
 
         let html = `
         <div class = 'cart-container__inner'>${htmlCatalog}
-            <div class = 'cart-container__total'>total: € ${sumCatalog}</div
-           </div> `;
+            <div class = "cart-container__checkout">
+                <div class = 'cart-container__total'>total: € ${sumCatalog}</div>
+                <button type = "button" class = 'cart-container__total cart-container__check-btn'>↪ place an order</button>
+           </div>
+        </div>`;
         ROOT_SHOP.insertAdjacentHTML('afterbegin', html);
     }
 }
 
 const shoppingCart = new Shop();
+
+
 
 const addToCartBtns = document.querySelectorAll('.shop-inner-text');
 
@@ -163,7 +168,19 @@ let btnCloseCart = document.querySelector('.cart-container');
 
 const btnCart = document.querySelector('.btn--cart');
 btnCart.addEventListener('click', () => {
+    let checkoutContainer = document.querySelector('.checkout');
+
     headerPage.rendCart();
+    let btnOpenCheckout = document.querySelector('.cart-container__check-btn');
+        btnOpenCheckout.addEventListener("click", () => {
+        shoppingCart.closeCart();
+        checkoutContainer.classList.remove('check-hide')
+    })
+    let btnCloseCheckout = document.querySelector('.check-btn--close');
+    btnCloseCheckout.addEventListener("click", () => {
+    checkoutContainer.classList.add('check-hide')
+})
+
 })
 btnCloseCart.addEventListener('click', (e) => {
     if (e.target == document.querySelector('.close-cart-btn')) {
@@ -193,4 +210,45 @@ document.querySelector('#search-input').oninput = function() {
         });
     }
 }
+let checkoutContainer = document.querySelector('.checkout');
+let checkoutBtn = document.querySelector('.checkout__btn');
 
+checkoutBtn.addEventListener('click', () => {
+    let regName = /^[A-Z]{1}[a-z]{1,23}\s[A-Z]{1}[a-z]{1,23}$/;
+    let regMail = /^((([0-9A-Za-z]{1}[-0-9A-z\.]{1,}[0-9A-Za-z]{1})|([0-9А-Яа-я]{1}[-0-9А-я\.]{1,}[0-9А-Яа-я]{1}))@([-A-Za-z]{1,}\.){1,2}[-A-Za-z]{2,})$/;
+    let regPhone = /^(\+|)(\d(\d| |)\d{3}(\d|\s|)\d{3}(\d|\s|)(\d{4}|\d{2}\s\d{2})$)/;
+    let regPost = /^\d\d{3,6}\d$/;
+    let nameArea = document.querySelector('#check-name');
+    let mailArea = document.querySelector('#check-mail');
+    let phoneArea = document.querySelector('#check-phone');
+    let postArea = document.querySelector('#check-post');
+    let nameVal = nameArea.value;
+    let mailVal = mailArea.value;
+    let phoneVal = phoneArea.value;
+    let postVal = postArea.value;
+    let regs = [regName, regMail, regPhone, regPost];
+    let values = [nameVal, mailVal, phoneVal, postVal];
+    let areas = [nameArea, mailArea, phoneArea, postArea];
+    let flag = true;
+    for (let i = 0; i < values.length; i++) {
+        areas[i].classList.remove('check-error');
+        if (!values[i].match(regs[i])) {
+           areas[i].classList.add('check-error')
+           flag = false;
+        }
+    }
+    if (!flag) {
+        checkoutBtn.textContent = 'checkout';
+        checkoutBtn.classList.remove('btn-post');
+    } else {
+        checkoutBtn.classList.add('btn-post');
+        checkoutBtn.textContent = 'Order placed';
+        localStorage.clear();
+        addToCartBtns.forEach(addBtn => {
+            addBtn.classList.remove('shop-item--active');
+        })
+        setTimeout(() => {
+            checkoutContainer.classList.add('check-hide')
+          }, 2000)
+    }
+})

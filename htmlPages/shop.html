@@ -103,7 +103,32 @@
     </div>
     <!-- корзина -->
     <aside id = 'shopping-cart' class = 'cart-container'></aside>
+    <aside class="checkout check-hide">
+        <div class="checkout__inner">
+            <span class="check-btn--close">╳</span>
+            <form class="checkout__form" action="" method="post">
+                <h3 class="checkout__heading">Enter ordering information</h3>
 
+                <div class="checkout__item">
+                    <label for="name" class="checkout__name">Full Name</label>
+                    <input class="checkout__area" id="check-name" type="text" placeholder="Michael Miles">
+                </div>
+                <div class="checkout__item">
+                    <label for="mail" class="checkout__mail">Email</label>
+                    <input class="checkout__area" id="check-mail" type="email" placeholder="michl@gmail.com">
+                </div>
+                <div class="checkout__item">
+                    <label for="phone" class="checkout__phone">Phone</label>
+                    <input class="checkout__area" id="check-phone" type="tel" placeholder="+1 111 111 1111">
+                </div>
+                <div class="checkout__item">
+                    <label for="address" class="checkout__address">Postal Code</label>
+                    <input  class="checkout__area" id="check-post" type="text" placeholder="11101">
+                </div>
+                <button  class="checkout__btn" type="button">checkout</button>
+            </form>
+        </div>
+    </aside>
     <footer class="footer">
         <div class="footer__inner">
             <div class="footer__content">

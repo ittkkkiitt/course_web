@@ -47,7 +47,7 @@
 .cart-container__total{
    font-weight: bold;
    font-size: 20px;
-   text-align: end;
+//    text-align: end;
    padding: 10px;
 }
 .cart-container__caption-inner {
@@ -67,4 +67,10 @@
 .cart-container__item-price {
     font-weight: 500;
     font-size: 20px;
+}
+.cart-container__checkout {
+    display:flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
 }
